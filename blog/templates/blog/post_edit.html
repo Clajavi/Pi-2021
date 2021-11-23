@@ -1,0 +1,15 @@
+{%  extends 'base.html' %}
+{% block title %} LGPD - Editar Postagem {% endblock title %}
+{% block content %}
+<h1>Editar Postagem</h1>
+
+<form action="" method="post">{% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="Editar">
+
+</form>
+        <div class="post-entry">
+            <h2>{{ object.titulo}}</h2>
+            <p>{{ object.conteudo}}</p>
+        </div>
+{% endblock content %}
